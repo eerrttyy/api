@@ -11,8 +11,8 @@
 ##### 9. [获取个人信息(getPersonalInfo)](#9-获取个人信息)
 ##### 10. [修改个人信息(modifyPersonalInfo)](#10-修改个人信息)
 ##### 11. [修改密码(modifyPassword)](#11-修改密码)
-##### 12. [董事长修改参数(modifySettingInfo)](#12-董事长修改参数)
-##### 13. [意见反馈(submitFeedback)](#13-意见反馈)
+##### 12. [意见反馈(submitFeedback)](#12-意见反馈)
+##### 13. [董事长修改参数(modifySettingInfo)](#13-董事长修改参数)
 ##### 14. [货主获取交易记录(getBillList)](#14-货主获取交易记录)
 ##### 15. [获取中国区划地址(getRegionAddress)](#15-获取中国区划地址)
 ##### 16. [获取发货点地址(getStartPointAddress)](#16-获取发货点地址)
@@ -458,7 +458,25 @@ authority为用户权限:
 ```
 
 ---
-### 12. [董事长修改参数](#12-董事长修改参数modifysettinginfo)
+
+### 12. [意见反馈](#12-意见反馈submitfeedback)
+- `submitFeedback`
+- 请求方式：`POST`
+
+| 参数名称 | 参数类型  | 描述 |
+| :- |:-:| :-:|
+| userId | ID | 用户Id |
+| content | String | 内容 |
+| email | String | 联系邮箱 |
+
+```js
+{
+    "success": true,
+}
+```
+
+---
+### 13. [董事长修改参数](#13-董事长修改参数modifysettinginfo)
 - `modifySettingInfo`
 - 请求方式：`POST`
 
@@ -476,24 +494,6 @@ authority为用户权限:
 | bondAmountWeightRate | number | 每吨货需要的保证金 |
 | rankedMaskFirstRankWeight | number | 屏蔽物流公司货物的基数 |
 | rankedMaskRateList | array | 屏蔽物流公司排名的梯度 |
-
-```js
-{
-    "success": true,
-}
-```
-
----
-
-### 13. [意见反馈](#13-意见反馈submitfeedback)
-- `submitFeedback`
-- 请求方式：`POST`
-
-| 参数名称 | 参数类型  | 描述 |
-| :- |:-:| :-:|
-| userId | ID | 用户Id |
-| content | String | 内容 |
-| email | String | 联系邮箱 |
 
 ```js
 {
